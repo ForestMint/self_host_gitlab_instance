@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  # Use Ubuntu 22.04 LTS
-  config.vm.box = "ubuntu/jammy64"
+  config.vm.hostname = "almalinux-9"
+  config.vm.box = "alvistack/almalinux-9"
 
   # Forward SSH agent (optional)
   config.ssh.forward_agent = true
