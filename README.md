@@ -1,6 +1,7 @@
 # 🦊 Self host Gitlab instance
 
 This repo is about traing with GitLab by self-hosting an instance on your machine.
+It is based on [this tutorial](https://www.youtube.com/watch?v=lYtfAq45lbU).
 
 ## Clone this repo and in the repo run the following :
 
