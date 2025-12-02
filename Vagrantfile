@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.hostname = "almalinux-9"
-  config.vm.box = "alvistack/almalinux-9"
+  config.vm.box = "ubuntu/jammy64"
 
   # Forward SSH agent (optional)
   config.ssh.forward_agent = true
