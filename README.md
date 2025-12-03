@@ -5,7 +5,7 @@ It is based on [this tutorial](https://www.youtube.com/watch?v=lYtfAq45lbU).
 
 ## Clone this repo and in the repo run the following :
 
-Clone this repo]
+Clone this repo
 
 ```bash
 vagrant up
