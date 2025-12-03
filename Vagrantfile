@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.hostname = "almalinux-9"
-  config.vm.box = "ubuntu/jammy64"
+  config.vm.hostname = "gitlab-instance"
+  config.vm.box = "ubuntu/jammy64" # call the ubuntu/jammy64 box among the Vagrant boxes
 
   # Forward SSH agent (optional)
   config.ssh.forward_agent = true
