@@ -35,5 +35,25 @@ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.de
 ```
 
 ```bash
-sudo EXTERNAL_URL="https://git.softsweb.site" apt-get install gitlab-ce
+sudo EXTERNAL_URL="http://git.djhgdweb.site" apt-get install gitlab-ce
+```
+
+```bash
+sudo gitlab-ctl reconfigure
+```
+
+```bash
+apt-cache madison gitlab-ce # List available versions
+```
+
+```bash
+sudo EXTERNAL_URL="http://git.djhgdweb.site" apt-get install gitlab-ce=18.6.1-ce.0 # Specifiy version
+```
+
+```bash
+sudo apt-mark hold gitlab-ce # Pin the version to limit auto-updates
+```
+
+```bash
+sudo apt-mark showhold # Show what packages are held back
 ```
