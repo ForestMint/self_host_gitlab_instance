@@ -37,6 +37,7 @@ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.de
 ```bash
 sudo EXTERNAL_URL="http://git.djhgdweb.site" apt-get install gitlab-ce
 ```
+<!--
 
 ```bash
 sudo gitlab-ctl reconfigure
@@ -57,3 +58,25 @@ sudo apt-mark hold gitlab-ce # Pin the version to limit auto-updates
 ```bash
 sudo apt-mark showhold # Show what packages are held back
 ```
+
+-->
+
+
+Check that GitLab is running on the current machine
+```bash
+sudo gitlab-ctl status
+curl -I http://localhost
+```
+
+Check the password and note it
+```bash
+sudo cat /etc/gitlab/initial_root_password
+```
+
+## Finalize settings
+
+In the Virtualbox settings of the machine running the GitLab instance, in Network section, pass adapter1 from "NAT, to 'Bridged Adapter'. It will terminate your 'vagrant ssh' connection session.
+
+Open your favorite browser in your host machine, open a new tab and type the URL 'http://192.168.56.17'
+
+You should be able to connect as root with the password displayed previously
