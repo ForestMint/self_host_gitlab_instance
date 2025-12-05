@@ -19,4 +19,7 @@ Vagrant.configure("2") do |config|
     vb.cpus = 2
   end
 
+  # File provisioner to copy a file
+  config.vm.provision "file", source: "./start_gitlab_instance.sh", destination: "/home/vagrant/start_gitlab_instance.sh"
+
 end

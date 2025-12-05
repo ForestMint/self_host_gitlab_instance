@@ -18,61 +18,13 @@ vagrant ssh
 ## In the machine, connected as vagrant with 'vagrant ssh', run the  following :
 
 ```bash
-sudo apt-get update
+chmod 777
+./start_gitlab_instance.sh
 ```
 
-```bash
-sudo  apt-get install -y curl openssh-server ca-certificates tzdata perl
-```
+The execution of the script might be long so go grab a cup of coffee ... ☕
 
-```bash
-echo "postfix postfix/main_mailer_type string Internet Site" | sudo debconf-set-selections
-sudo  apt-get install -y postfix # install postfix for email notifications
-# choose "Internet site" then type a name then validate
-```
-
-```bash
-curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
-```
-
-```bash
-sudo EXTERNAL_URL="http://git.djhgdweb.site" apt-get install gitlab-ce
-```
-<!--
-
-```bash
-sudo gitlab-ctl reconfigure
-```
-
-```bash
-apt-cache madison gitlab-ce # List available versions
-```
-
-```bash
-sudo EXTERNAL_URL="http://git.djhgdweb.site" apt-get install gitlab-ce=18.6.1-ce.0 # Specifiy version
-```
-
-```bash
-sudo apt-mark hold gitlab-ce # Pin the version to limit auto-updates
-```
-
-```bash
-sudo apt-mark showhold # Show what packages are held back
-```
-
--->
-
-
-Check that GitLab is running on the current machine
-```bash
-sudo gitlab-ctl status
-curl -I http://localhost
-```
-
-Check the password and note it
-```bash
-sudo cat /etc/gitlab/initial_root_password
-```
+When the script is done, save the password displayed.
 
 ## Finalize settings
 
