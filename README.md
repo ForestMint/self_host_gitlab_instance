@@ -26,6 +26,7 @@ sudo  apt-get install -y curl openssh-server ca-certificates tzdata perl
 ```
 
 ```bash
+echo "postfix postfix/main_mailer_type string Internet Site" | sudo debconf-set-selections
 sudo  apt-get install -y postfix # install postfix for email notifications
 # choose "Internet site" then type a name then validate
 ```
