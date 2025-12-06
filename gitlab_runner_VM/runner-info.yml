@@ -1,5 +1,5 @@
-gitlab_url: http://192.168.56.17/
-registration_token: aFX8c7jtyfZszbkeWjTn
+gitlab_url: http://my-ip/
+registration_token: runner-token
 runner_description: vagrant-auto-runner
 runner_tags: vagrant,auto
 executor: shell
