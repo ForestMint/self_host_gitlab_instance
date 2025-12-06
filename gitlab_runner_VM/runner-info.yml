@@ -1,0 +1,6 @@
+gitlab_url: "https://your.gitlab.example.com"
+registration_token: "YOUR_RUNNER_REGISTRATION_TOKEN"
+runner_description: "vagrant-auto-runner"
+runner_tags: "vagrant,auto"
+executor: "shell"
+default_docker_image: "alpine:latest"
