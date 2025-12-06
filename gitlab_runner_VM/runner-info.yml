@@ -1,0 +1,6 @@
+gitlab_url: http://my-ip/
+registration_token: my-token
+runner_description: vagrant-auto-runner
+runner_tags: vagrant,auto
+executor: shell
+default_docker_image: alpine:latest
