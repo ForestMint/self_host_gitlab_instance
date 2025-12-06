@@ -8,6 +8,10 @@ It is based on [this tutorial](https://www.youtube.com/watch?v=lYtfAq45lbU) and 
 Clone this repo
 
 ```bash
+cd ./gitlab_instance_VM/
+```
+
+```bash
 vagrant up --provider=virtualbox
 ```
 
@@ -15,7 +19,7 @@ vagrant up --provider=virtualbox
 vagrant ssh
 ```
 
-## In the machine, connected as vagrant with 'vagrant ssh', run the  following :
+## In the machine for the GitLab instance, connected as vagrant with 'vagrant ssh', run the  following :
 
 ```bash
 chmod 777 start_gitlab_instance.sh
@@ -45,3 +49,27 @@ Open your favorite browser in your host machine, open a new tab and type the URL
 You can get a 502 as GitLab might be restarting. So go grab a cup of coffee ... ☕
 
 You should be able to connect as root with the password displayed previously
+
+## Start runner
+
+Copy the URL for the GitLab API.
+
+In the instance interface, as admin, goto '🔧Admin' section by clicking in the top-right corner.
+You'll have the Admin area menu on the left of the screen.
+Go to '🚀 CI/CD' > Runners.
+Click the button right the 'Create instance runner' and copy the token.
+Paste the URL and token in the right fields in ./gitlab_runner_VM/runner-info.yml
+
+Go to this repository
+```bash
+cd ./gitlab_runner_VM/
+```
+
+Create the VM, this command will register the runner
+```bash
+vagrant up --provider=virtualbox
+```
+
+Check in your instance that the runner is  properly registered
+
+
